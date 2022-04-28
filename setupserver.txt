@@ -1,4 +1,0 @@
-sudo apt install openssh-server
-ps -aef | grep sshd
-
-https://medium.com/nycdev/how-to-ssh-from-a-host-to-a-guest-vm-on-your-local-machine-6cb4c91acc2e

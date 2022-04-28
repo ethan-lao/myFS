@@ -1,11 +1,11 @@
 CC = gcc
 fuse_test: filesys.c
-	${CC} filesys.c -o fuse_filesys `pkg-config fuse --cflags --libs` -lssh  
+	${CC} filesys.c -o myFS `pkg-config fuse --cflags --libs` -lssh  
 	${CC} program.c -o program 
 	${CC} printFileSize.c -o printFileSize
 	mkdir mnt
 clean:
-	rm fuse_filesys
+	rm myFS
 	rm program
 	rm printFileSize
 	rm -rf mnt
