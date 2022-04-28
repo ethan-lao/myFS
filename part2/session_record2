@@ -1,0 +1,102 @@
+Script started on 2022-03-07 17:29:48-06:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="198" LINES="12"]
+]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ strace cat > [K[K[K "hi hom[K[K[Kmom" > new_file
+execve("/usr/bin/cat", ["cat", "hi mom"], 0x7fffd6fd1918 /* 62 vars */) = 0
+brk(NULL)                               = 0x556a73a15000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7fff82b1e290) = -1 EINVAL (Invalid argument)
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=82313, ...}) = 0
+mmap(NULL, 82313, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f8d554b9000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360A\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\237\333t\347\262\27\320l\223\27*\202C\370T\177"..., 68, 880) = 68
+fstat(3, {st_mode=S_IFREG|0755, st_size=2029560, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f8d554b7000
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\237\333t\347\262\27\320l\223\27*\202C\370T\177"..., 68, 880) = 68
+mmap(NULL, 2037344, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f8d552c5000
+mmap(0x7f8d552e7000, 1540096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x22000) = 0x7f8d552e7000
+mmap(0x7f8d5545f000, 319488, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19a000) = 0x7f8d5545f000
+mmap(0x7f8d554ad000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e7000) = 0x7f8d554ad000
+mmap(0x7f8d554b3000, 13920, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f8d554b3000
+close(3)                                = 0
+arch_prctl(ARCH_SET_FS, 0x7f8d554b8580) = 0
+mprotect(0x7f8d554ad000, 16384, PROT_READ) = 0
+mprotect(0x556a72dfc000, 4096, PROT_READ) = 0
+mprotect(0x7f8d554fb000, 4096, PROT_READ) = 0
+munmap(0x7f8d554b9000, 82313)           = 0
+brk(NULL)                               = 0x556a73a15000
+brk(0x556a73a36000)                     = 0x556a73a36000
+openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=5699248, ...}) = 0
+mmap(NULL, 5699248, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f8d54d55000
+close(3)                                = 0
+fstat(1, {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+openat(AT_FDCWD, "hi mom", O_RDONLY)    = -1 ENOENT (No such file or directory)
+write(2, "cat: ", 5cat: )                    = 5
+write(2, "'hi mom'", 8'hi mom')                 = 8
+openat(AT_FDCWD, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=2996, ...}) = 0
+read(3, "# Locale name alias data base.\n#"..., 4096) = 2996
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/share/locale/en_US.UTF-8/LC_MESSAGES/libc.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale/en_US.utf8/LC_MESSAGES/libc.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale/en_US/LC_MESSAGES/libc.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale/en.UTF-8/LC_MESSAGES/libc.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale/en.utf8/LC_MESSAGES/libc.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale/en/LC_MESSAGES/libc.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale-langpack/en_US.UTF-8/LC_MESSAGES/libc.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale-langpack/en_US.utf8/LC_MESSAGES/libc.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale-langpack/en_US/LC_MESSAGES/libc.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale-langpack/en.UTF-8/LC_MESSAGES/libc.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale-langpack/en.utf8/LC_MESSAGES/libc.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale-langpack/en/LC_MESSAGES/libc.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+write(2, ": No such file or directory", 27: No such file or directory) = 27
+write(2, "\n", 1
+)                       = 1
+close(1)                                = 0
+close(2)                                = 0
+exit_group(1)                           = ?
++++ exited with 1 +++
+]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ [K]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ [K]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ [K]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ [K]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ [K]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ [K]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ [K]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ [K]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ [K]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ [K]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ sudo dhclient wlo1
+[sudo] password for ethan: 
+]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ sudo dhclient wlo1
+]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ sudo dhclient wlo1
+]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ sudo dhclient wlo1[K-r
+]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ sudo dhclient -rwlo1
+]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ [K]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ [K]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ [K]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ [K]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ sudo dhclient wlo1[2P-r
+]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ sudo dhclient -rwlo1
+]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ tcpdump -r part2.[Kc.txt  > part2c2.txt
+]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ tcpdump -r part2c.txt  > part2c2.txt[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ tcpdump -r part2c.txt[C[1@-[1@U[1@ 
+]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ tcpdump -U -r part2c.txt[3P[C[C[C[C[C[C[C[C[C[C[C[C  > part2c2.txt[18Psudo dhclient wlo1[2P-r
+[sudo] password for ethan: 
+]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ sudo dhclient -rtcpdump -U -r part2c.txt[3P[C[C[C[C[C[C[C[C[C[C[C[C  > part2c2.txt[18Psudo dhclient wlo1
+]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ sudo dhclient wlo1[2P-rtcpdump -U -r part2c.txt
+]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ tcpdump -U -r part2c.txt[1P[1P[1P
+]0;ethan@ethanUSB: ~/Desktop/OS/Lab3.2/part2[01;32methan@ethanUSB[00m:[01;34m~/Desktop/OS/Lab3.2/part2[00m$ sudo p[Kapt install tcpt[Kdump
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+tcpdump is already the newest version (4.9.3-4).
+tcpdump set to manually installed.
+The following packages were automatically installed and are no longer required:
+  gyp javascript-common libc-ares2 libjs-inherits libjs-is-typedarray libjs-psl libjs-typedarray-to-buffer libuv1-dev node-abbrev node-ajv node-ansi node-ansi-align
+  node-ansi-regex node-ansi-styles node-ansistyles node-aproba node-archy node-are-we-there-yet node-asap node-asn1 node-assert-plus node-asynckit node-aws-sign2 node-aws4
+  node-balanced-match node-bcrypt-pbkdf node-bl node-bluebird node-boxen node-brace-expansion node-builtin-modules node-builtins node-cacache node-call-limit
+  node-camelcase node-caseless node-chalk node-chownr node-ci-info node-cli-boxes node-cliui node-clone node-co node-color-convert node-color-name node-colors
+  node-columnify node-combined-stream node-concat-map node-concat-stream node-config-chain node-configstore node-console-control-strings node-copy-concurrently
+  node-core-util-is node-cross-spawn node-crypto-random-string node-cyclist node-dashdash node-debug node-decamelize node-decompress-response node-deep-extend
+  node-defaults node-define-properties node-delayed-stream node-delegates node-detect-indent node-detect-newline node-dot-prop node-duplexer3 node-duplexify node-ecc-jsbn
+  node-editor node-encoding node-end-of-stream node-err-code node-errno node-es6-promise node-escape-string-regexp node-execa node-extend node-extsprintf
+  node-fast-deep-equal node-find-up node-flush-write-stream node-forever-agent node-form-data node-from2 node-fs-vacuum node-fs-write-stream-atomic node-fs.realpath
+  node-function-bind node-gauge node-genfun node-get-caller-file node-get-stream node-getpass node-glob node-got node-graceful-fs node-har-schema node-har-validator
+  node-has-flag node-has-symbol-support-x node-has-to-string-tag-x node-has-unicode node-hosted-git-info node-http-signature node-iconv-lite node-iferr node-import-lazy
+  node-imurmurhash node-inflight node-inherits node-ini node-invert-kv node-ip node-ip-regex node-is-npm node-is-obj node-is-object node-is-path-inside node-is-plain-obj
+  node-is-retry-allowed node-is-stream node-is-typedarray node-isarray node-isexe node-isstream node-isurl node-jsbn node-json-parse-better-errors node-json-schema
+  node-json-schema-traverse node-json-stable-stringify node-json-stringify-safe node-jsonify node-jsonparse node-jsonstream node-jsprim node-la

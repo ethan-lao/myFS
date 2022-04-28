@@ -1,0 +1,856 @@
+FUSE library version: 2.9.9
+nullpath_ok: 0
+nopath: 0
+utime_omit_ok: 0
+unique: 2, opcode: INIT (26), nodeid: 0, insize: 56, pid: 0
+INIT: 7.34
+flags=0x33fffffb
+max_readahead=0x00020000
+   INIT: 7.19
+   flags=0x00000011
+   max_readahead=0x00020000
+   max_write=0x00020000
+   max_background=0
+   congestion_threshold=0
+   unique: 2, success, outsize: 40
+unique: 4, opcode: ACCESS (34), nodeid: 1, insize: 48, pid: 1625
+   unique: 4, error: -38 (Function not implemented), outsize: 16
+unique: 6, opcode: LOOKUP (1), nodeid: 1, insize: 47, pid: 1625
+LOOKUP /.Trash
+getattr /.Trash
+unique: 8, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 1064
+opendir flags: 0x18800 /
+   opendir[139725084037072] flags: 0x18800 /
+   unique: 8, success, outsize: 32
+unique: 10, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 1064
+getattr /
+   unique: 6, error: -2 (No such file or directory), outsize: 16
+unique: 12, opcode: LOOKUP (1), nodeid: 1, insize: 57, pid: 23703
+LOOKUP /.xdg-volume-info
+getattr /.xdg-volume-info
+   unique: 10, success, outsize: 120
+   unique: 12, error: -2 (No such file or directory), outsize: 16
+unique: 14, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 23704
+LOOKUP /autorun.inf
+getattr /autorun.inf
+   unique: 14, error: -2 (No such file or directory), outsize: 16
+unique: 16, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 1625
+LOOKUP /.Trash-1000
+getattr /.Trash-1000
+   unique: 16, error: -2 (No such file or directory), outsize: 16
+unique: 18, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+readdir[139725084037072] from 0
+   unique: 18, success, outsize: 112
+unique: 20, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 20, success, outsize: 16
+unique: 22, opcode: LOOKUP (1), nodeid: 1, insize: 48, pid: 1064
+LOOKUP /program
+getattr /program
+   NODEID: 2
+   unique: 22, success, outsize: 144
+unique: 24, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 24, success, outsize: 16
+unique: 26, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+releasedir[139725084037072] flags: 0x0
+   unique: 26, success, outsize: 16
+unique: 28, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 1064
+opendir flags: 0x18800 /
+   opendir[139725151148432] flags: 0x18800 /
+   unique: 28, success, outsize: 32
+unique: 30, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 1064
+getattr /
+   unique: 30, success, outsize: 120
+unique: 32, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+readdir[139725151148432] from 0
+   unique: 32, success, outsize: 112
+unique: 34, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 34, success, outsize: 16
+unique: 36, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 36, success, outsize: 16
+unique: 38, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+unique: 40, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 1064
+opendir flags: 0x18800 /
+releasedir[139725151148432] flags: 0x0
+   opendir[139725151181680] flags: 0x18800 /
+   unique: 40, success, outsize: 32
+   unique: 38, success, outsize: 16
+unique: 42, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 1064
+getattr /
+   unique: 42, success, outsize: 120
+unique: 44, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+readdir[139725151181680] from 0
+   unique: 44, success, outsize: 112
+unique: 46, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 46, success, outsize: 16
+unique: 48, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 48, success, outsize: 16
+unique: 50, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+releasedir[139725151181680] flags: 0x0
+   unique: 50, success, outsize: 16
+unique: 52, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 1064
+opendir flags: 0x18800 /
+   opendir[139725218257760] flags: 0x18800 /
+   unique: 52, success, outsize: 32
+unique: 54, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 1064
+getattr /
+   unique: 54, success, outsize: 120
+unique: 56, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+readdir[139725218257760] from 0
+   unique: 56, success, outsize: 112
+unique: 58, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 58, success, outsize: 16
+unique: 60, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 60, success, outsize: 16
+unique: 62, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+releasedir[139725218257760] flags: 0x0
+   unique: 62, success, outsize: 16
+unique: 64, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 1064
+opendir flags: 0x18800 /
+   opendir[139725218257888] flags: 0x18800 /
+   unique: 64, success, outsize: 32
+unique: 66, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 1064
+getattr /
+   unique: 66, success, outsize: 120
+unique: 68, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+readdir[139725218257888] from 0
+   unique: 68, success, outsize: 112
+unique: 70, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 70, success, outsize: 16
+unique: 72, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 72, success, outsize: 16
+unique: 74, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+releasedir[139725218257888] flags: 0x0
+   unique: 74, success, outsize: 16
+unique: 76, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 1064
+opendir flags: 0x18800 /
+   opendir[139725218258016] flags: 0x18800 /
+   unique: 76, success, outsize: 32
+unique: 78, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 1064
+getattr /
+   unique: 78, success, outsize: 120
+unique: 80, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+readdir[139725218258016] from 0
+   unique: 80, success, outsize: 112
+unique: 82, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 82, success, outsize: 16
+unique: 84, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 84, success, outsize: 16
+unique: 86, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+releasedir[139725218258016] flags: 0x0
+   unique: 86, success, outsize: 16
+unique: 88, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 1064
+opendir flags: 0x18800 /
+   opendir[139725218258144] flags: 0x18800 /
+   unique: 88, success, outsize: 32
+unique: 90, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 1064
+getattr /
+   unique: 90, success, outsize: 120
+unique: 92, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+readdir[139725218258144] from 0
+   unique: 92, success, outsize: 112
+unique: 94, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 94, success, outsize: 16
+unique: 96, opcode: LOOKUP (1), nodeid: 1, insize: 48, pid: 1064
+LOOKUP /program
+getattr /program
+   NODEID: 2
+   unique: 96, success, outsize: 144
+unique: 98, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 98, success, outsize: 16
+unique: 100, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+releasedir[139725218258144] flags: 0x0
+   unique: 100, success, outsize: 16
+unique: 102, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 1064
+opendir flags: 0x18800 /
+   opendir[139725084073232] flags: 0x18800 /
+   unique: 102, success, outsize: 32
+unique: 104, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 1064
+getattr /
+   unique: 104, success, outsize: 120
+unique: 106, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+readdir[139725084073232] from 0
+   unique: 106, success, outsize: 112
+unique: 108, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 108, success, outsize: 16
+unique: 110, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 110, success, outsize: 16
+unique: 112, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+releasedir[139725084073232] flags: 0x0
+   unique: 112, success, outsize: 16
+unique: 114, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 1064
+opendir flags: 0x18800 /
+   opendir[139725084073232] flags: 0x18800 /
+   unique: 114, success, outsize: 32
+unique: 116, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 1064
+getattr /
+   unique: 116, success, outsize: 120
+unique: 118, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+readdir[139725084073232] from 0
+   unique: 118, success, outsize: 112
+unique: 120, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 120, success, outsize: 16
+unique: 122, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 122, success, outsize: 16
+unique: 124, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+releasedir[139725084073232] flags: 0x0
+unique: 126, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 1064
+opendir flags: 0x18800 /
+   opendir[139725084073232] flags: 0x18800 /
+   unique: 126, success, outsize: 32
+   unique: 124, success, outsize: 16
+unique: 128, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 1064
+getattr /
+   unique: 128, success, outsize: 120
+unique: 130, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+readdir[139725084073232] from 0
+   unique: 130, success, outsize: 112
+unique: 132, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 132, success, outsize: 16
+unique: 134, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 134, success, outsize: 16
+unique: 136, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+releasedir[139725084073232] flags: 0x0
+   unique: 136, success, outsize: 16
+unique: 138, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 1064
+opendir flags: 0x18800 /
+   opendir[139725151181680] flags: 0x18800 /
+   unique: 138, success, outsize: 32
+unique: 140, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 1064
+getattr /
+   unique: 140, success, outsize: 120
+unique: 142, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+readdir[139725151181680] from 0
+   unique: 142, success, outsize: 112
+unique: 144, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 144, success, outsize: 16
+unique: 146, opcode: LOOKUP (1), nodeid: 1, insize: 48, pid: 1064
+LOOKUP /program
+getattr /program
+   NODEID: 2
+   unique: 146, success, outsize: 144
+unique: 148, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 148, success, outsize: 16
+unique: 150, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+releasedir[139725151181680] flags: 0x0
+   unique: 150, success, outsize: 16
+unique: 152, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 1064
+opendir flags: 0x18800 /
+   opendir[139725151181680] flags: 0x18800 /
+   unique: 152, success, outsize: 32
+unique: 154, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 1064
+getattr /
+   unique: 154, success, outsize: 120
+unique: 156, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+readdir[139725151181680] from 0
+   unique: 156, success, outsize: 112
+unique: 158, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 158, success, outsize: 16
+unique: 160, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 160, success, outsize: 16
+unique: 162, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+releasedir[139725151181680] flags: 0x0
+   unique: 162, success, outsize: 16
+unique: 164, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 1064
+opendir flags: 0x18800 /
+   opendir[139725218259104] flags: 0x18800 /
+   unique: 164, success, outsize: 32
+unique: 166, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 1064
+getattr /
+   unique: 166, success, outsize: 120
+unique: 168, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+readdir[139725218259104] from 0
+   unique: 168, success, outsize: 112
+unique: 170, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 170, success, outsize: 16
+unique: 172, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 172, success, outsize: 16
+unique: 174, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+releasedir[139725218259104] flags: 0x0
+   unique: 174, success, outsize: 16
+unique: 176, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 1064
+opendir flags: 0x18800 /
+   opendir[139725218259232] flags: 0x18800 /
+   unique: 176, success, outsize: 32
+unique: 178, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 1064
+getattr /
+   unique: 178, success, outsize: 120
+unique: 180, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+readdir[139725218259232] from 0
+   unique: 180, success, outsize: 112
+unique: 182, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 182, success, outsize: 16
+unique: 184, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 184, success, outsize: 16
+unique: 186, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+releasedir[139725218259232] flags: 0x0
+   unique: 186, success, outsize: 16
+unique: 188, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 1064
+opendir flags: 0x18800 /
+   opendir[139725218259232] flags: 0x18800 /
+   unique: 188, success, outsize: 32
+unique: 190, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 1064
+getattr /
+   unique: 190, success, outsize: 120
+unique: 192, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+readdir[139725218259232] from 0
+   unique: 192, success, outsize: 112
+unique: 194, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 194, success, outsize: 16
+unique: 196, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 196, success, outsize: 16
+unique: 198, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+releasedir[139725218259232] flags: 0x0
+   unique: 198, success, outsize: 16
+unique: 200, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 1064
+opendir flags: 0x18800 /
+   opendir[139725218259232] flags: 0x18800 /
+   unique: 200, success, outsize: 32
+unique: 202, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 1064
+getattr /
+   unique: 202, success, outsize: 120
+unique: 204, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+readdir[139725218259232] from 0
+   unique: 204, success, outsize: 112
+unique: 206, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 206, success, outsize: 16
+unique: 208, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 208, success, outsize: 16
+unique: 210, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+releasedir[139725218259232] flags: 0x0
+unique: 212, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 1064
+opendir flags: 0x18800 /
+   opendir[139725218259232] flags: 0x18800 /
+   unique: 212, success, outsize: 32
+   unique: 210, success, outsize: 16
+unique: 214, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 1064
+getattr /
+   unique: 214, success, outsize: 120
+unique: 216, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+readdir[139725218259232] from 0
+   unique: 216, success, outsize: 112
+unique: 218, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 218, success, outsize: 16
+unique: 220, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 220, success, outsize: 16
+unique: 222, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+releasedir[139725218259232] flags: 0x0
+unique: 224, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 1064
+opendir flags: 0x18800 /
+   unique: 222, success, outsize: 16
+   opendir[139725151181680] flags: 0x18800 /
+   unique: 224, success, outsize: 32
+unique: 226, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 1064
+getattr /
+   unique: 226, success, outsize: 120
+unique: 228, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+readdir[139725151181680] from 0
+   unique: 228, success, outsize: 112
+unique: 230, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 230, success, outsize: 16
+unique: 232, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 232, success, outsize: 16
+unique: 234, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+unique: 236, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 1064
+opendir flags: 0x18800 /
+releasedir[139725151181680] flags: 0x0
+   opendir[139725151214512] flags: 0x18800 /
+   unique: 236, success, outsize: 32
+   unique: 234, success, outsize: 16
+unique: 238, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 1064
+getattr /
+   unique: 238, success, outsize: 120
+unique: 240, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+readdir[139725151214512] from 0
+   unique: 240, success, outsize: 112
+unique: 242, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 242, success, outsize: 16
+unique: 244, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 244, success, outsize: 16
+unique: 246, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+releasedir[139725151214512] flags: 0x0
+unique: 248, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 1064
+opendir flags: 0x18800 /
+   unique: 246, success, outsize: 16
+   opendir[139725218259360] flags: 0x18800 /
+   unique: 248, success, outsize: 32
+unique: 250, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 1064
+getattr /
+   unique: 250, success, outsize: 120
+unique: 252, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+readdir[139725218259360] from 0
+   unique: 252, success, outsize: 112
+unique: 254, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 254, success, outsize: 16
+unique: 256, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 256, success, outsize: 16
+unique: 258, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+releasedir[139725218259360] flags: 0x0
+unique: 260, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 1064
+opendir flags: 0x18800 /
+   unique: 258, success, outsize: 16
+   opendir[139725218259360] flags: 0x18800 /
+   unique: 260, success, outsize: 32
+unique: 262, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 1064
+getattr /
+   unique: 262, success, outsize: 120
+unique: 264, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+readdir[139725218259360] from 0
+   unique: 264, success, outsize: 112
+unique: 266, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 266, success, outsize: 16
+unique: 268, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 268, success, outsize: 16
+unique: 270, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+releasedir[139725218259360] flags: 0x0
+unique: 272, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 1064
+opendir flags: 0x18800 /
+   opendir[139725218259360] flags: 0x18800 /
+   unique: 270, success, outsize: 16
+   unique: 272, success, outsize: 32
+unique: 274, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 1064
+getattr /
+   unique: 274, success, outsize: 120
+unique: 276, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+readdir[139725218259360] from 0
+   unique: 276, success, outsize: 112
+unique: 278, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 278, success, outsize: 16
+unique: 280, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 280, success, outsize: 16
+unique: 282, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+releasedir[139725218259360] flags: 0x0
+   unique: 282, success, outsize: 16
+unique: 284, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 1064
+opendir flags: 0x18800 /
+   opendir[139725218259360] flags: 0x18800 /
+   unique: 284, success, outsize: 32
+unique: 286, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 1064
+getattr /
+   unique: 286, success, outsize: 120
+unique: 288, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+readdir[139725218259360] from 0
+   unique: 288, success, outsize: 112
+unique: 290, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 290, success, outsize: 16
+unique: 292, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 292, success, outsize: 16
+unique: 294, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+releasedir[139725218259360] flags: 0x0
+   unique: 294, success, outsize: 16
+unique: 296, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 1064
+opendir flags: 0x18800 /
+   opendir[139725218259360] flags: 0x18800 /
+   unique: 296, success, outsize: 32
+unique: 298, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 1064
+getattr /
+   unique: 298, success, outsize: 120
+unique: 300, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+readdir[139725218259360] from 0
+   unique: 300, success, outsize: 112
+unique: 302, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 302, success, outsize: 16
+unique: 304, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 304, success, outsize: 16
+unique: 306, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+releasedir[139725218259360] flags: 0x0
+   unique: 306, success, outsize: 16
+unique: 308, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 1064
+opendir flags: 0x18800 /
+   opendir[139725218259360] flags: 0x18800 /
+   unique: 308, success, outsize: 32
+unique: 310, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 1064
+getattr /
+   unique: 310, success, outsize: 120
+unique: 312, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+readdir[139725218259360] from 0
+   unique: 312, success, outsize: 112
+unique: 314, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 314, success, outsize: 16
+unique: 316, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 1064
+   unique: 316, success, outsize: 16
+unique: 318, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+releasedir[139725218259360] flags: 0x0
+   unique: 318, success, outsize: 16
+unique: 320, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 23703
+opendir flags: 0x18800 /
+   opendir[139725218259360] flags: 0x18800 /
+   unique: 320, success, outsize: 32
+unique: 322, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 23703
+getattr /
+   unique: 322, success, outsize: 120
+unique: 324, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 23703
+readdir[139725218259360] from 0
+   unique: 324, success, outsize: 112
+unique: 326, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 23703
+   unique: 326, success, outsize: 16
+unique: 328, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 23703
+   unique: 328, success, outsize: 16
+unique: 332, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 23703
+unique: 330, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+LOOKUP /autorun.inf
+getattr /autorun.inf
+releasedir[139725218259360] flags: 0x0
+   unique: 330, success, outsize: 16
+   unique: 332, error: -2 (No such file or directory), outsize: 16
+unique: 334, opcode: LOOKUP (1), nodeid: 1, insize: 44, pid: 2776
+LOOKUP /foo
+getattr /foo
+   NODEID: 3
+   unique: 334, success, outsize: 144
+unique: 336, opcode: LOOKUP (1), nodeid: 1, insize: 48, pid: 1015
+LOOKUP /.hidden
+getattr /.hidden
+   unique: 336, error: -2 (No such file or directory), outsize: 16
+unique: 338, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 1015
+getattr /
+   unique: 338, success, outsize: 120
+unique: 340, opcode: OPEN (14), nodeid: 3, insize: 48, pid: 23677
+open flags: 0x48000 /foo
+unique: 342, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 23792
+getattr /
+   unique: 342, success, outsize: 120
+   open[6] flags: 0x48000 /foo
+   unique: 340, success, outsize: 32
+unique: 344, opcode: GETATTR (3), nodeid: 3, insize: 56, pid: 23677
+getattr /foo
+   unique: 344, success, outsize: 120
+unique: 346, opcode: READ (15), nodeid: 3, insize: 80, pid: 23677
+read[6] 4096 bytes from 0 flags: 0x48000
+   read[6] 100 bytes from 0
+   unique: 346, success, outsize: 116
+unique: 348, opcode: FLUSH (25), nodeid: 3, insize: 64, pid: 23677
+flush[6]
+   unique: 348, success, outsize: 16
+unique: 350, opcode: RELEASE (18), nodeid: 3, insize: 64, pid: 0
+release[6] flags: 0x48000
+   unique: 350, success, outsize: 16
+unique: 352, opcode: LOOKUP (1), nodeid: 1, insize: 48, pid: 2776
+LOOKUP /program
+getattr /program
+unique: 354, opcode: LOOKUP (1), nodeid: 1, insize: 48, pid: 1034
+LOOKUP /program
+getattr /program
+   NODEID: 2
+   unique: 352, success, outsize: 144
+   NODEID: 2
+   unique: 354, success, outsize: 144
+unique: 356, opcode: LOOKUP (1), nodeid: 1, insize: 48, pid: 1015
+LOOKUP /program
+getattr /program
+   NODEID: 2
+   unique: 356, success, outsize: 144
+unique: 358, opcode: LOOKUP (1), nodeid: 1, insize: 48, pid: 1015
+LOOKUP /.hidden
+getattr /.hidden
+   unique: 358, error: -2 (No such file or directory), outsize: 16
+unique: 360, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 1015
+getattr /
+unique: 362, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 2778
+getattr /
+   unique: 360, success, outsize: 120
+unique: 364, opcode: OPEN (14), nodeid: 2, insize: 48, pid: 23677
+open flags: 0x48000 /program
+   unique: 362, success, outsize: 120
+unique: 366, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 2778
+opendir flags: 0x18800 /
+   opendir[139725084086176] flags: 0x18800 /
+   unique: 366, success, outsize: 32
+unique: 368, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 2778
+readdir[139725084086176] from 0
+   unique: 368, success, outsize: 144
+unique: 370, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 2778
+getattr /
+   unique: 370, success, outsize: 120
+unique: 372, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 2778
+   unique: 372, success, outsize: 16
+unique: 374, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+releasedir[139725084086176] flags: 0x0
+   unique: 374, success, outsize: 16
+unique: 376, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 2778
+getattr /
+   unique: 376, success, outsize: 120
+   open[6] flags: 0x48000 /program
+   unique: 364, success, outsize: 32
+unique: 378, opcode: READ (15), nodeid: 2, insize: 80, pid: 23677
+read[6] 16384 bytes from 0 flags: 0x48000
+   read[6] 16384 bytes from 0
+   unique: 378, success, outsize: 16400
+unique: 380, opcode: READ (15), nodeid: 2, insize: 80, pid: 23677
+read[6] 4096 bytes from 16384 flags: 0x48000
+   read[6] 864 bytes from 16384
+   unique: 380, success, outsize: 880
+unique: 382, opcode: FLUSH (25), nodeid: 2, insize: 64, pid: 23677
+flush[6]
+   unique: 382, success, outsize: 16
+unique: 384, opcode: RELEASE (18), nodeid: 2, insize: 64, pid: 0
+release[6] flags: 0x48000
+   unique: 384, success, outsize: 16
+unique: 386, opcode: LOOKUP (1), nodeid: 1, insize: 44, pid: 2776
+LOOKUP /foo
+getattr /foo
+unique: 388, opcode: LOOKUP (1), nodeid: 1, insize: 44, pid: 1015
+LOOKUP /foo
+getattr /foo
+   NODEID: 3
+   unique: 386, success, outsize: 144
+   NODEID: 3
+   unique: 388, success, outsize: 144
+unique: 390, opcode: OPEN (14), nodeid: 3, insize: 48, pid: 23677
+open flags: 0x48000 /foo
+   open[6] flags: 0x48000 /foo
+   unique: 390, success, outsize: 32
+unique: 392, opcode: GETATTR (3), nodeid: 3, insize: 56, pid: 23677
+getattr /foo
+   unique: 392, success, outsize: 120
+unique: 394, opcode: READ (15), nodeid: 3, insize: 80, pid: 23677
+read[6] 4096 bytes from 0 flags: 0x48000
+   read[6] 100 bytes from 0
+   unique: 394, success, outsize: 116
+unique: 396, opcode: FLUSH (25), nodeid: 3, insize: 64, pid: 23677
+flush[6]
+   unique: 396, success, outsize: 16
+unique: 398, opcode: RELEASE (18), nodeid: 3, insize: 64, pid: 0
+release[6] flags: 0x48000
+   unique: 398, success, outsize: 16
+unique: 400, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 23843
+getattr /
+   unique: 400, success, outsize: 120
+unique: 402, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 23843
+opendir flags: 0x18800 /
+   opendir[139725084086176] flags: 0x18800 /
+   unique: 402, success, outsize: 32
+unique: 404, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 23843
+readdir[139725084086176] from 0
+   unique: 404, success, outsize: 144
+unique: 406, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 23843
+getattr /
+   unique: 406, success, outsize: 120
+unique: 408, opcode: LOOKUP (1), nodeid: 1, insize: 48, pid: 23843
+LOOKUP /program
+getattr /program
+   NODEID: 2
+   unique: 408, success, outsize: 144
+unique: 410, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 23843
+   unique: 410, success, outsize: 16
+unique: 412, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+releasedir[139725084086176] flags: 0x0
+unique: 414, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 23843
+   unique: 412, success, outsize: 16
+getattr /
+   unique: 414, success, outsize: 120
+unique: 416, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 23843
+opendir flags: 0x18800 /
+   opendir[139725151186464] flags: 0x18800 /
+   unique: 416, success, outsize: 32
+unique: 418, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 23843
+readdir[139725151186464] from 0
+   unique: 418, success, outsize: 144
+unique: 420, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 23843
+   unique: 420, success, outsize: 16
+unique: 422, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+releasedir[139725151186464] flags: 0x0
+   unique: 422, success, outsize: 16
+unique: 424, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 2778
+getattr /
+   unique: 424, success, outsize: 120
+unique: 426, opcode: LOOKUP (1), nodeid: 1, insize: 44, pid: 2776
+LOOKUP /foo
+getattr /foo
+unique: 428, opcode: LOOKUP (1), nodeid: 1, insize: 44, pid: 1015
+LOOKUP /foo
+getattr /foo
+   NODEID: 3
+   unique: 426, success, outsize: 144
+   NODEID: 3
+   unique: 428, success, outsize: 144
+unique: 430, opcode: LOOKUP (1), nodeid: 1, insize: 48, pid: 1015
+LOOKUP /.hidden
+getattr /.hidden
+   unique: 430, error: -2 (No such file or directory), outsize: 16
+unique: 432, opcode: OPEN (14), nodeid: 3, insize: 48, pid: 23677
+open flags: 0x48000 /foo
+   open[6] flags: 0x48000 /foo
+   unique: 432, success, outsize: 32
+unique: 434, opcode: GETATTR (3), nodeid: 3, insize: 56, pid: 23677
+getattr /foo
+   unique: 434, success, outsize: 120
+unique: 436, opcode: READ (15), nodeid: 3, insize: 80, pid: 23677
+read[6] 4096 bytes from 0 flags: 0x48000
+   read[6] 100 bytes from 0
+   unique: 436, success, outsize: 116
+unique: 438, opcode: FLUSH (25), nodeid: 3, insize: 64, pid: 23677
+flush[6]
+   unique: 438, success, outsize: 16
+unique: 440, opcode: RELEASE (18), nodeid: 3, insize: 64, pid: 0
+release[6] flags: 0x48000
+   unique: 440, success, outsize: 16
+unique: 442, opcode: LOOKUP (1), nodeid: 1, insize: 44, pid: 2776
+LOOKUP /foo
+getattr /foo
+   NODEID: 3
+   unique: 442, success, outsize: 144
+unique: 444, opcode: OPEN (14), nodeid: 3, insize: 48, pid: 23677
+open flags: 0x48000 /foo
+   open[6] flags: 0x48000 /foo
+   unique: 444, success, outsize: 32
+unique: 446, opcode: GETATTR (3), nodeid: 3, insize: 56, pid: 23677
+getattr /foo
+   unique: 446, success, outsize: 120
+unique: 448, opcode: READ (15), nodeid: 3, insize: 80, pid: 23677
+read[6] 4096 bytes from 0 flags: 0x48000
+   read[6] 100 bytes from 0
+   unique: 448, success, outsize: 116
+unique: 450, opcode: FLUSH (25), nodeid: 3, insize: 64, pid: 23677
+flush[6]
+   unique: 450, success, outsize: 16
+unique: 452, opcode: RELEASE (18), nodeid: 3, insize: 64, pid: 0
+release[6] flags: 0x48000
+   unique: 452, success, outsize: 16
+unique: 454, opcode: LOOKUP (1), nodeid: 1, insize: 44, pid: 1015
+LOOKUP /foo
+getattr /foo
+   NODEID: 3
+   unique: 454, success, outsize: 144
+unique: 456, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 1015
+getattr /
+   unique: 456, success, outsize: 120
+unique: 458, opcode: LOOKUP (1), nodeid: 1, insize: 48, pid: 1015
+LOOKUP /.hidden
+getattr /.hidden
+   unique: 458, error: -2 (No such file or directory), outsize: 16
+unique: 460, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 2778
+getattr /
+   unique: 460, success, outsize: 120
+unique: 462, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 2778
+opendir flags: 0x18800 /
+   opendir[139725218297408] flags: 0x18800 /
+   unique: 462, success, outsize: 32
+unique: 464, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 2778
+readdir[139725218297408] from 0
+   unique: 464, success, outsize: 144
+unique: 466, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 2778
+getattr /
+   unique: 466, success, outsize: 120
+unique: 468, opcode: LOOKUP (1), nodeid: 1, insize: 48, pid: 2778
+LOOKUP /program
+getattr /program
+   NODEID: 2
+   unique: 468, success, outsize: 144
+unique: 470, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 2778
+   unique: 470, success, outsize: 16
+unique: 472, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+releasedir[139725218297408] flags: 0x0
+unique: 474, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 2778
+   unique: 472, success, outsize: 16
+getattr /
+   unique: 474, success, outsize: 120
+unique: 476, opcode: LOOKUP (1), nodeid: 1, insize: 44, pid: 2776
+LOOKUP /foo
+getattr /foo
+unique: 478, opcode: LOOKUP (1), nodeid: 1, insize: 44, pid: 1034
+LOOKUP /foo
+getattr /foo
+   NODEID: 3
+   unique: 476, success, outsize: 144
+   NODEID: 3
+   unique: 478, success, outsize: 144
+unique: 480, opcode: LOOKUP (1), nodeid: 1, insize: 48, pid: 1015
+LOOKUP /.hidden
+getattr /.hidden
+   unique: 480, error: -2 (No such file or directory), outsize: 16
+unique: 482, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 1015
+getattr /
+   unique: 482, success, outsize: 120
+unique: 484, opcode: LOOKUP (1), nodeid: 1, insize: 44, pid: 1015
+LOOKUP /foo
+getattr /foo
+   NODEID: 3
+   unique: 484, success, outsize: 144
+unique: 486, opcode: OPEN (14), nodeid: 3, insize: 48, pid: 23914
+open flags: 0x48000 /foo
+unique: 488, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 2778
+opendir flags: 0x18800 /
+   opendir[139725084086176] flags: 0x18800 /
+   unique: 488, success, outsize: 32
+unique: 490, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 2778
+readdir[139725084086176] from 0
+   unique: 490, success, outsize: 144
+unique: 492, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 2778
+getattr /
+   unique: 492, success, outsize: 120
+unique: 494, opcode: LOOKUP (1), nodeid: 1, insize: 48, pid: 2778
+LOOKUP /program
+getattr /program
+   NODEID: 2
+   unique: 494, success, outsize: 144
+unique: 496, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 2778
+   unique: 496, success, outsize: 16
+unique: 498, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+releasedir[139725084086176] flags: 0x0
+   unique: 498, success, outsize: 16
+unique: 500, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 2778
+getattr /
+   unique: 500, success, outsize: 120
+unique: 502, opcode: LOOKUP (1), nodeid: 1, insize: 44, pid: 2776
+LOOKUP /foo
+getattr /foo
+unique: 504, opcode: LOOKUP (1), nodeid: 1, insize: 44, pid: 1015
+LOOKUP /foo
+getattr /foo
+   NODEID: 3
+   unique: 502, success, outsize: 144
+   NODEID: 3
+   unique: 504, success, outsize: 144
+   open[6] flags: 0x48000 /foo
+   unique: 486, success, outsize: 32
+unique: 506, opcode: GETATTR (3), nodeid: 3, insize: 56, pid: 23914
+getattr /foo
+   unique: 506, success, outsize: 120
+unique: 508, opcode: READ (15), nodeid: 3, insize: 80, pid: 23914
+read[6] 4096 bytes from 0 flags: 0x48000
+   read[6] 100 bytes from 0
+   unique: 508, success, outsize: 116
+unique: 510, opcode: FLUSH (25), nodeid: 3, insize: 64, pid: 23914
+flush[6]
+   unique: 510, success, outsize: 16
+unique: 512, opcode: RELEASE (18), nodeid: 3, insize: 64, pid: 0
+release[6] flags: 0x48000
+   unique: 512, success, outsize: 16
+unique: 514, opcode: LOOKUP (1), nodeid: 1, insize: 44, pid: 23914
+LOOKUP /foo
+getattr /foo
+   NODEID: 3
+   unique: 514, success, outsize: 144
+unique: 516, opcode: OPEN (14), nodeid: 3, insize: 48, pid: 23914
+open flags: 0x48000 /foo
+   open[6] flags: 0x48000 /foo
+   unique: 516, success, outsize: 32
+unique: 518, opcode: GETATTR (3), nodeid: 3, insize: 56, pid: 23914
+getattr /foo
+   unique: 518, success, outsize: 120
+unique: 520, opcode: READ (15), nodeid: 3, insize: 80, pid: 23914
+read[6] 4096 bytes from 0 flags: 0x48000
+   read[6] 100 bytes from 0
+   unique: 520, success, outsize: 116
+unique: 522, opcode: FLUSH (25), nodeid: 3, insize: 64, pid: 23914
+flush[6]
+   unique: 522, success, outsize: 16
+unique: 524, opcode: RELEASE (18), nodeid: 3, insize: 64, pid: 0
+release[6] flags: 0x48000
+   unique: 524, success, outsize: 16
+unique: 526, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 2630
+LOOKUP /fuse_filesys
+getattr /fuse_filesys
+   unique: 526, error: -2 (No such file or directory), outsize: 16
+unique: 528, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 2629
+LOOKUP /fuse_filesys
+getattr /fuse_filesys
+   unique: 528, error: -2 (No such file or directory), outsize: 16
+unique: 530, opcode: LOOKUP (1), nodeid: 1, insize: 44, pid: 2628
+LOOKUP /mnt
+getattr /mnt
+   unique: 530, error: -2 (No such file or directory), outsize: 16
+unique: 532, opcode: LOOKUP (1), nodeid: 1, insize: 44, pid: 2627
+LOOKUP /mnt
+getattr /mnt
+   unique: 532, error: -2 (No such file or directory), outsize: 16
