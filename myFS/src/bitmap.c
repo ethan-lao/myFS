@@ -16,14 +16,17 @@ static void error_log(char *fmt, ...) {
 #endif
 }
 
-uint64_t findFirstFreeBlock() {
+uint64_t findFirstFreeBlockAndSet() {
     for (int i = 0; i < NUMBLOCKS; i++) {
-        if (get_bit(i)) {
+        if (!get_bit(i)) {
+            set_bit(i);
+            // fprintf(stderr, "returning bit %d\n", i);
             return i;
         }
     }
     
     error_log("Returning not found!");
+    fprintf(stderr, "Out of space!!!\n");
     return -1;
 }
 
@@ -38,4 +41,15 @@ void clear_bit(int n) {
 int get_bit(int n) {
     word_t bit = bitmap[WORD_OFFSET(n)] & (1 << BIT_OFFSET(n));
     return bit != 0; 
+}
+
+void print_bitmap(int n) {
+    for (int i = 0; i < n; i++) {
+        if (get_bit(i)) {
+            fprintf(stderr, "1");
+        } else {
+            fprintf(stderr, "0");
+        }
+    }
+    fprintf(stderr, "\n");
 }

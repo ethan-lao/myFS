@@ -1,0 +1,129 @@
+0000000000000000000000000000000000000000000000000000000000000000000000
+Size of inode: 520
+Size of simpleBlock: 4088
+Size of indirectionBlock: 4096
+Size of linkedBlock: 4096
+Size of childrenBlock: 3968
+Size of Num in children: 15
+1000000000000000000000000000000000000000000000000000000000000000000000
+1100000000000000000000000000000000000000000000000000000000000000000000
+name: /
+
+getattr on path: /.Trash
+path not found
+
+getattr on path: /.Trash-1000
+path not found
+
+getattr on path: /.xdg-volume-info
+path not found
+
+getattr on path: /
+
+getattr on path: /autorun.inf
+path not found
+
+myfs_readdir
+
+getattr on path: /
+
+myfs_readdir
+
+getattr on path: /
+
+myfs_readdir
+
+getattr on path: /
+
+myfs_readdir
+
+getattr on path: /
+
+myfs_readdir
+
+getattr on path: /
+
+myfs_readdir
+
+getattr on path: /
+
+myfs_readdir
+
+getattr on path: /
+
+myfs_readdir
+
+getattr on path: /
+
+myfs_readdir
+
+getattr on path: /
+
+myfs_readdir
+
+getattr on path: /
+
+myfs_readdir
+
+getattr on path: /
+
+myfs_readdir
+
+getattr on path: /
+
+myfs_readdir
+
+getattr on path: /
+
+myfs_readdir
+
+getattr on path: /
+
+myfs_readdir
+
+getattr on path: /
+
+myfs_readdir
+
+getattr on path: /
+
+myfs_readdir
+
+getattr on path: /
+
+myfs_readdir
+
+getattr on path: /
+
+myfs_readdir
+
+getattr on path: /
+
+myfs_readdir
+
+getattr on path: /
+
+myfs_readdir
+
+getattr on path: /
+
+myfs_readdir
+
+getattr on path: /
+
+myfs_readdir
+
+getattr on path: /
+
+myfs_readdir
+
+getattr on path: /
+
+myfs_readdir
+
+getattr on path: /
+
+myfs_readdir
+
+getattr on path: /autorun.inf
+path not found
