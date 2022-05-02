@@ -16,8 +16,8 @@
 #include <fuse.h>
 #include "bitmap.h"
 
-#define FSSIZE (1024 * 1024 * 1024)
-#define BLOCKSIZE 1024
+#define BLOCKSIZE (4096 + sizeof(uint64_t))
+#define FSSIZE (1024 * 1024 * BLOCKSIZE)
 #define NUMBLOCKS (FSSIZE / BLOCKSIZE)
 
 #define NUMDIRECT 10
@@ -92,6 +92,7 @@ typedef struct inode {
     uint64_t linkedStart;
     uint64_t linkedEnd;
     uint64_t linkedRecent;
+    int linkedRecentIndex;
 } inode;
 
 

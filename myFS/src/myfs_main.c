@@ -78,7 +78,7 @@ int main(int argc, char *argv[]) {
     // fprintf(stderr, "disk: %x\n", get_linkedBlock(1026) - get_linkedBlock(0));
     // fprintf(stderr, "disk: %ld\n", FSSIZE);
     bitmap = mmap(NULL, NUMWORDS * sizeof(word_t), PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANONYMOUS, 0, 0);
-    print_bitmap(70);
+    // print_bitmap(70);
 
     fprintf(stderr, "Size of inode: %ld\n", sizeof(inode));
     fprintf(stderr, "Size of simpleBlock: %ld\n", sizeof(simpleBlock));
@@ -93,9 +93,9 @@ int main(int argc, char *argv[]) {
 
     // update the bitmap
     set_bit(0);
-    print_bitmap(70);
+    // print_bitmap(70);
     uint64_t chInode = findFirstFreeBlockAndSet();
-    print_bitmap(70);
+    // print_bitmap(70);
 
     root->type = 2;
 
