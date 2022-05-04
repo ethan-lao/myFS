@@ -17,7 +17,7 @@
 #include "bitmap.h"
 
 #define BLOCKSIZE (4096 + sizeof(uint64_t))
-#define FSSIZE (1024 * 1024 * BLOCKSIZE)
+#define FSSIZE (1024 * 1024 * BLOCKSIZE * 2)
 #define NUMBLOCKS (FSSIZE / BLOCKSIZE)
 
 #define NUMDIRECT 10

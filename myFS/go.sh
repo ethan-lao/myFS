@@ -1,8 +1,24 @@
+make test
 cd mountpoint
-touch test.txt
-echo "125125125125125" > test.txt
-cat test.txt
+touch foo
+cp ../program .
+cp ../makeFiles.sh .
+chmod +x program
 
-echo "test1" > test.txt
+time bash makeFiles.sh
 
-cat test.txt
+echo "
+"
+time ./program 1 26
+
+echo "
+"
+time ./program 2 26
+
+echo "
+"
+time ./program 3 24
+
+echo "
+"
+time ./program 4 11

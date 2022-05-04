@@ -62,10 +62,10 @@ static struct fuse_operations myfs_operations = {
 int main(int argc, char *argv[]) {
     int fuse_stat;
 
-    // int fd = open("./backing.txt", O_RDWR);
-    // disk = mmap(0, FSSIZE, PROT_READ | PROT_WRITE, MAP_PRIVATE, fd, 0);
-    disk = mmap(0, FSSIZE, PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANONYMOUS, 0, 0);
-    // memset(disk, 0, FSSIZE);
+    int fd = open("./backing.txt", O_RDWR);
+    disk = mmap(0, FSSIZE, PROT_READ | PROT_WRITE, MAP_PRIVATE, fd, 0);
+    // disk = mmap(0, FSSIZE, PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANONYMOUS, 0, 0);
+    memset(disk, 0, FSSIZE);
     // fprintf(stderr, "%d\n", *(disk));
     // fprintf(stderr, "%d\n", *(disk + FSSIZE - 20));
     // fprintf(stderr, "%x\n", (disk + FSSIZE - 20));
@@ -78,6 +78,7 @@ int main(int argc, char *argv[]) {
     // fprintf(stderr, "disk: %x\n", get_linkedBlock(1026) - get_linkedBlock(0));
     // fprintf(stderr, "disk: %ld\n", FSSIZE);
     bitmap = mmap(NULL, NUMWORDS * sizeof(word_t), PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANONYMOUS, 0, 0);
+    // memset(disk, 0, NUMWORDS * sizeof(word_t));
     // print_bitmap(70);
 
     fprintf(stderr, "Size of inode: %ld\n", sizeof(inode));

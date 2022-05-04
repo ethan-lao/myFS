@@ -26,5 +26,8 @@ dcompile: checkdir
 checkdir:
 	if [ -d "$(mountpoint)" ]; then echo "mountpoint exists"; else mkdir $(mountpoint); fi
 
+test:
+	gcc -o program program.c
+
 cleanup :
 	-fusermount -u $(mountpoint)

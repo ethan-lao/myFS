@@ -178,7 +178,7 @@ int extendByBlock(inode *node, indirectionBlock *indirBlock) {
 
 int expand(inode *node, size_t size) {
     uint64_t len = node->data_size;
-    fprintf(stderr, "old size: %d, newSize: %d\n", len, size);
+    // fprintf(stderr, "old size: %d, newSize: %d\n", len, size);
 
     if (len > size) {
         return 0;
@@ -207,7 +207,7 @@ int expand(inode *node, size_t size) {
         }
     }
 
-    fprintf(stderr, "Adding %d blocks\n", newEndBlock - curEndBlock);
+    // fprintf(stderr, "Adding %d blocks\n", newEndBlock - curEndBlock);
 
     return 0;
 }
@@ -364,7 +364,7 @@ int myfs_getattr(const char *path, struct stat *s) {
 
     inode *curr = node_exists(path);
     if (!curr) {
-        fprintf(stderr, "path not found\n");
+        // fprintf(stderr, "path not found\n");
         error_log("curr = %p ; not found returning!", curr);
         return -ENOENT;
     }
@@ -562,7 +562,7 @@ int myfs_rmdir(const char *path) {
 
 
 int myfs_open(const char *path, struct fuse_file_info *fi) {
-    fprintf(stderr, "\nmyfs_open\n");
+    // fprintf(stderr, "\nmyfs_open\n");
 
     error_log("%s called on path : %s", __func__, path);
     
@@ -604,7 +604,7 @@ void readFromInode(inode *node, char *buf, size_t size, off_t offset) {
         int block = offset / DATA_IN_BLOCK;
         simpleBlock *dirBlock = get_simpleBlock(node->directBlocks[block]);
         memcpy(buf, dirBlock->data + blockOffset, size);
-        fprintf(stderr, "Reading %d bytes to direct block %d at offset %d\n", size, block, blockOffset);
+        // fprintf(stderr, "Reading %d bytes to direct block %d at offset %d\n", size, block, blockOffset);
     } else if (offset < (NUMDIRECT + NUM_IN_INDIRECT) * DATA_IN_BLOCK) {
         // in indirect block
 
@@ -616,7 +616,7 @@ void readFromInode(inode *node, char *buf, size_t size, off_t offset) {
         indirectionBlock *indirBlock = get_indirectionBlock(node->indirectionBlock);
         simpleBlock *dest = get_simpleBlock(indirBlock->blocks[block]);
         memcpy(buf, dest->data + blockOffset, size);
-        fprintf(stderr, "Reading %d bytes to indirect block %d at offset %d\n", size, block, blockOffset);
+        // fprintf(stderr, "Reading %d bytes to indirect block %d at offset %d\n", size, block, blockOffset);
     } else {
         // in linked
 
@@ -641,11 +641,14 @@ void readFromInode(inode *node, char *buf, size_t size, off_t offset) {
                 searchBlockNum = node->linkedRecent;
             }
 
+            int readNumLook = 0;
             while (searchIndex != block) {
+                readNumLook += 1;
                 searchIndex += 1;
                 searchBlockNum = searchPos->next;
                 searchPos = get_linkedBlock(searchPos->next);
             }
+            fprintf(stderr, "read  | linked search: %d\n", readNumLook);
 
             src = searchPos;
             node->linkedRecent = searchBlockNum;
@@ -653,12 +656,12 @@ void readFromInode(inode *node, char *buf, size_t size, off_t offset) {
         }
 
         memcpy(buf, src->data + blockOffset, size);
-        fprintf(stderr, "Reading %d bytes to linked block %d at offset %d\n", size, block, blockOffset);
+        // fprintf(stderr, "Reading %d bytes to linked block %d at offset %d\n", size, block, blockOffset);
     }
 }
 
 int myfs_read(const char *path, char *buf, size_t size, off_t offset,struct fuse_file_info *fi) {
-    fprintf(stderr, "\nmyfs_read\n");
+    // fprintf(stderr, "\nmyfs_read\n");
 
     inode *curr = node_exists(path);
     size_t len = curr->data_size;
@@ -709,7 +712,7 @@ void writeToInode(inode *node, const char *buf, size_t size, off_t offset) {
         int block = offset / DATA_IN_BLOCK;
         simpleBlock *dirBlock = get_simpleBlock(node->directBlocks[block]);
         memcpy(dirBlock->data + blockOffset, buf, size);
-        fprintf(stderr, "Writing %d bytes to direct block %d at offset %d\n", size, block, blockOffset);
+        // fprintf(stderr, "Writing %d bytes to direct block %d at offset %d\n", size, block, blockOffset);
     } else if (offset < (NUMDIRECT + NUM_IN_INDIRECT) * DATA_IN_BLOCK) {
         // in indirect block
 
@@ -721,7 +724,7 @@ void writeToInode(inode *node, const char *buf, size_t size, off_t offset) {
         indirectionBlock *indirBlock = get_indirectionBlock(node->indirectionBlock);
         simpleBlock *dest = get_simpleBlock(indirBlock->blocks[block]);
         memcpy(dest->data + blockOffset, buf, size);
-        fprintf(stderr, "Writing %d bytes to indirect block %d at offset %d\n", size, block, blockOffset);
+        // fprintf(stderr, "Writing %d bytes to indirect block %d at offset %d\n", size, block, blockOffset);
     } else {
         // in linked
 
@@ -746,11 +749,14 @@ void writeToInode(inode *node, const char *buf, size_t size, off_t offset) {
                 searchBlockNum = node->linkedRecent;
             }
 
+            int numLook = 0;
             while (searchIndex != block) {
+                numLook += 1;
                 searchIndex += 1;
                 searchBlockNum = searchPos->next;
                 searchPos = get_linkedBlock(searchPos->next);
             }
+            // fprintf(stderr, "write | linked search: %d\n", numLook);
 
             dest = searchPos;
             node->linkedRecent = searchBlockNum;
@@ -758,16 +764,16 @@ void writeToInode(inode *node, const char *buf, size_t size, off_t offset) {
         }
 
         memcpy(dest->data + blockOffset, buf, size);
-        fprintf(stderr, "Writing %d bytes to linked block %d at offset %d\n", size, block, blockOffset);
+        // fprintf(stderr, "Writing %d bytes to linked block %d at offset %d\n", size, block, blockOffset);
     }
 }
 
 int myfs_write(const char *path, const char *buf, size_t size, off_t offset, struct fuse_file_info *fi) {   
-    fprintf(stderr, "\nmyfs_write\n");
 
     inode *curr = node_exists(path);
     size_t len = curr->data_size;
     size_t newLen = size + offset;    
+    // fprintf(stderr, "\nmyfs_write: %s\n", curr->name);
 
     expand(curr, newLen);
     if (newLen > len) {
@@ -807,7 +813,7 @@ int myfs_write(const char *path, const char *buf, size_t size, off_t offset, str
 
 
 int myfs_utimens(const char *path, struct utimbuf *tv) {
-    fprintf(stderr, "\nmyfs_utimens\n");
+    // fprintf(stderr, "\nmyfs_utimens\n");
 
     error_log("%s called on path : %s", __func__, path);
     error_log("atime = %s; mtime = %s ", ctime(&(tv->actime)), ctime(&(tv->modtime)));
@@ -833,7 +839,7 @@ int myfs_utimens(const char *path, struct utimbuf *tv) {
 
 
 int myfs_truncate(const char* path, off_t size) {
-    fprintf(stderr, "\nmyfs_truncate\n");
+    // fprintf(stderr, "\nmyfs_truncate\n");
 
     error_log("%s called on path : %s ; to change to size = %d ;", __func__, path,size);
 
@@ -869,7 +875,7 @@ int myfs_rename(const char *from, const char *to) {
 
 
 int myfs_chmod(const char *path, mode_t setPerm) {
-    fprintf(stderr, "\nmyfs_chmod\n");
+    // fprintf(stderr, "\nmyfs_chmod\n");
 
     error_log("%s called on path : %s ; to set : %d", __func__, path, setPerm);
 
@@ -896,7 +902,7 @@ int myfs_chmod(const char *path, mode_t setPerm) {
 
 
 int myfs_chown(const char *path, uid_t u, gid_t g) {
-    fprintf(stderr, "\nmyfs_chown\n");
+    // fprintf(stderr, "\nmyfs_chown\n");
 
     error_log("%s called on path : %s ; to set : u = %d\t g = %d", __func__, path, u, g);
 
@@ -925,7 +931,7 @@ int myfs_chown(const char *path, uid_t u, gid_t g) {
 
 
 int myfs_flush(const  char *path, struct fuse_file_info *fi) {
-    fprintf(stderr, "\nmyfs_flush\n");
+    // fprintf(stderr, "\nmyfs_flush\n");
 
     // error_log("%s called on path : %s", __func__, path);
 
